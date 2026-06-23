@@ -1,0 +1,14 @@
+.event-promo {
+  display: grid;
+  gap: 0.75rem;
+  padding: 2rem 1rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.5rem;
+  background: #f7f9fa;
+}
+
+.event-promo h2,
+.event-promo p {
+  margin: 0;
+}
+

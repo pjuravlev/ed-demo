@@ -1,0 +1,21 @@
+.event-overview {
+  display: grid;
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+
+.event-overview h2 {
+  margin: 0;
+}
+
+.event-overview p {
+  margin: 0;
+  max-width: 75ch;
+}
+
+@media (min-width: 768px) {
+  .event-overview {
+    padding: 3rem 2rem;
+  }
+}
+

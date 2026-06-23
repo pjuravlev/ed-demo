@@ -1,0 +1,28 @@
+.event-sponsors {
+  padding: 1rem;
+}
+
+.event-sponsors ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.event-sponsors li {
+  border: 1px solid #d9d9d9;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.event-sponsors h3 {
+  margin: 0 0 0.5rem;
+}
+
+.event-sponsors img {
+  max-height: 48px;
+  width: auto;
+  margin: 0.25rem 0.5rem 0.25rem 0;
+}
+

@@ -1,0 +1,25 @@
+.event-venue {
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.event-venue .event-venue-info,
+.event-venue .event-venue-media {
+  border: 1px solid #d9d9d9;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.event-venue .event-venue-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .event-venue {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+

@@ -1,0 +1,30 @@
+.event-agenda {
+  padding: 1rem;
+}
+
+.event-agenda ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.event-agenda li {
+  border-left: 4px solid #00b388;
+  padding: 0.5rem 0.75rem;
+  background: #f7f9fa;
+}
+
+.event-agenda-time {
+  font-weight: 700;
+}
+
+.event-agenda-title {
+  margin: 0.125rem 0 0.25rem;
+}
+
+.event-agenda-details {
+  margin: 0;
+}
+
