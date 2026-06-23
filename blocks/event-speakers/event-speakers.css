@@ -2,6 +2,10 @@
   padding: 1rem;
 }
 
+.event-speakers h2 {
+  margin: 0 0 0.5rem;
+}
+
 .event-speakers ul {
   margin: 0;
   padding: 0;

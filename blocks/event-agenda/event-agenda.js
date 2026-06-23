@@ -33,6 +33,7 @@ export default function decorate(block) {
 
   block.textContent = '';
   block.classList.add('event-agenda');
-  block.append(list);
+  const heading = document.createElement('h2');
+  heading.textContent = 'Agenda';
+  block.append(heading, list);
 }
-

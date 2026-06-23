@@ -3,7 +3,7 @@
   gap: 0.75rem;
   justify-items: center;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1.8rem 1rem;
   background: linear-gradient(180deg, #1a1f2a, #111722);
   color: #fff;
 }
@@ -20,5 +20,5 @@
   text-decoration: none;
   font-weight: 700;
   border-radius: 999px;
-  padding: 0.45rem 1rem;
+  padding: 0.4rem 0.95rem;
 }
