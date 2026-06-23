@@ -2,10 +2,7 @@
   display: grid;
   gap: 0.625rem;
   padding: 2rem 1rem 2rem 5.5rem;
-  background:
-    repeating-radial-gradient(circle at 85% 55%, rgba(196, 189, 170, 0.15) 0 12px, rgba(196, 189, 170, 0.02) 12px 24px),
-    radial-gradient(circle at 90% 40%, rgba(201, 188, 164, 0.5), transparent 40%),
-    linear-gradient(90deg, #f6f7f8, #ece8df);
+  background:url('//d3m889aznlr23d.cloudfront.net/img/events/id/459/459323916/assets/ee7cd14cc8bf430d38b575aa598135d0.storage_protect_data_geokit_reg_banner_3200xx880_light_background.jpg');
   color: #111;
   border-radius: 0.5rem;
   position: relative;
