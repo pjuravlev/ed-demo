@@ -1,5 +1,8 @@
 .event-agenda {
-  padding: 1rem;
+  padding: 2rem 1rem;
+  background: linear-gradient(180deg, #1a1f2a, #111722);
+  color: #fff;
+  border-radius: 0.25rem;
 }
 
 .event-agenda ul {
@@ -11,9 +14,9 @@
 }
 
 .event-agenda li {
-  border-left: 4px solid #00b388;
-  padding: 0.5rem 0.75rem;
-  background: #f7f9fa;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 0.65rem 0;
+  background: transparent;
 }
 
 .event-agenda-time {
@@ -22,9 +25,10 @@
 
 .event-agenda-title {
   margin: 0.125rem 0 0.25rem;
+  color: #fff;
 }
 
 .event-agenda-details {
   margin: 0;
+  color: rgba(255, 255, 255, 0.9);
 }
-

@@ -5,34 +5,40 @@ export default function decorate(block) {
   rows.forEach((row) => {
     const [imageCell, nameCell, roleCell, bioCell] = [...row.children];
     const li = document.createElement('li');
+    const media = document.createElement('div');
+    media.className = 'event-speakers-media';
+    const content = document.createElement('div');
+    content.className = 'event-speakers-content';
 
     if (imageCell?.innerHTML?.trim()) {
       const imageWrap = document.createElement('div');
       imageWrap.innerHTML = imageCell.innerHTML;
-      li.append(imageWrap);
+      media.append(imageWrap);
     }
 
     const name = nameCell?.textContent?.trim();
     if (name) {
       const h3 = document.createElement('h3');
       h3.textContent = name;
-      li.append(h3);
+      content.append(h3);
     }
 
     const role = roleCell?.textContent?.trim();
     if (role) {
       const roleEl = document.createElement('p');
       roleEl.innerHTML = `<strong>${role}</strong>`;
-      li.append(roleEl);
+      content.append(roleEl);
     }
 
     const bio = bioCell?.innerHTML?.trim();
     if (bio) {
       const bioEl = document.createElement('p');
       bioEl.innerHTML = bio;
-      li.append(bioEl);
+      content.append(bioEl);
     }
 
+    if (media.childElementCount) li.append(media);
+    if (content.childElementCount) li.append(content);
     if (li.childElementCount) list.append(li);
   });
 
@@ -40,4 +46,3 @@ export default function decorate(block) {
   block.classList.add('event-speakers');
   block.append(list);
 }
-

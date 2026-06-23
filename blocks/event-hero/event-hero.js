@@ -1,7 +1,16 @@
 export default function decorate(block) {
   const rows = [...block.children];
-  const values = rows.map((row) => row.firstElementChild?.innerHTML?.trim() || '');
-  const [eyebrow, title, subtitle, date, time, location, cta] = values;
+  const getCell = (index) => rows[index]?.children?.[0];
+  const getText = (index) => getCell(index)?.textContent?.trim() || '';
+  const getHtml = (index) => getCell(index)?.innerHTML?.trim() || '';
+
+  const eyebrow = getText(0);
+  const title = getText(1);
+  const subtitle = getHtml(2);
+  const date = getText(3);
+  const time = getText(4);
+  const location = getText(5);
+  const cta = getHtml(6);
 
   block.textContent = '';
   block.classList.add('event-hero');
@@ -29,7 +38,7 @@ export default function decorate(block) {
   meta.className = 'event-hero-meta';
   [date, time, location].filter(Boolean).forEach((value) => {
     const p = document.createElement('p');
-    p.innerHTML = value;
+    p.textContent = value;
     meta.append(p);
   });
   if (meta.childElementCount) block.append(meta);
@@ -41,4 +50,3 @@ export default function decorate(block) {
     block.append(ctaContainer);
   }
 }
-

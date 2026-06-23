@@ -1,7 +1,10 @@
 export default function decorate(block) {
   const rows = [...block.children];
-  const values = rows.map((row) => row.firstElementChild?.innerHTML?.trim() || '').filter(Boolean);
-  const [heading, ...paragraphs] = values;
+  const headingCell = rows[0]?.children?.[0];
+  const heading = headingCell?.textContent?.trim() || '';
+  const paragraphs = rows.slice(1)
+    .map((row) => row.children?.[0]?.innerHTML?.trim() || '')
+    .filter(Boolean);
 
   block.textContent = '';
   block.classList.add('event-overview');
@@ -18,4 +21,3 @@ export default function decorate(block) {
     block.append(p);
   });
 }
-

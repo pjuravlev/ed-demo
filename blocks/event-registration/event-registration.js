@@ -11,6 +11,9 @@ export default function decorate(block) {
   const rows = [...block.children];
   const form = document.createElement('form');
   form.setAttribute('aria-label', 'Event registration');
+  const heading = document.createElement('h2');
+  heading.textContent = 'Event Registration';
+  form.append(heading);
 
   let submitLabel = 'Submit';
 
@@ -55,4 +58,3 @@ export default function decorate(block) {
   block.classList.add('event-registration');
   block.append(form);
 }
-

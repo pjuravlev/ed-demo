@@ -1,17 +1,40 @@
 .event-hero {
   display: grid;
-  gap: 0.75rem;
-  padding: 2rem 1rem;
-  background: #111;
-  color: #fff;
+  gap: 0.625rem;
+  padding: 2rem 1rem 2rem 5.5rem;
+  background:
+    radial-gradient(circle at 90% 40%, rgba(201, 188, 164, 0.5), transparent 40%),
+    linear-gradient(90deg, #f6f7f8, #ece8df);
+  color: #111;
   border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.event-hero::before,
+.event-hero::after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0.7rem solid #00b388;
+  border-left: 0;
+  border-bottom: 0;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.event-hero::after {
+  left: 2.4rem;
+  border-color: #8ce7b0;
 }
 
 .event-hero-eyebrow {
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #8ce7b0;
+  color: #007a63;
 }
 
 .event-hero h1 {
@@ -34,9 +57,30 @@
   margin-top: 0.75rem;
 }
 
-@media (min-width: 768px) {
-  .event-hero {
-    padding: 3rem;
-  }
+.event-hero .button-container a {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
 }
 
+@media (min-width: 768px) {
+  .event-hero {
+    padding: 2.5rem 3rem 2.5rem 9rem;
+  }
+
+  .event-hero::before,
+  .event-hero::after {
+    left: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.95rem;
+  }
+
+  .event-hero::after {
+    left: 3.8rem;
+  }
+}

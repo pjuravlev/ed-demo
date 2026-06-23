@@ -1,7 +1,9 @@
 export default function decorate(block) {
   const rows = [...block.children];
-  const values = rows.map((row) => row.firstElementChild?.innerHTML?.trim() || '').filter(Boolean);
-  const [heading, body, cta] = values;
+  const getCell = (index) => rows[index]?.children?.[0];
+  const heading = getCell(0)?.textContent?.trim() || '';
+  const body = getCell(1)?.innerHTML?.trim() || '';
+  const cta = getCell(2)?.innerHTML?.trim() || '';
 
   block.textContent = '';
   block.classList.add('event-promo');
@@ -23,4 +25,3 @@ export default function decorate(block) {
     block.append(ctaWrap);
   }
 }
-
