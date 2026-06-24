@@ -1,7 +1,8 @@
 .event-venue {
-  padding: 1rem 1rem 1.5rem;
+  padding: 1.5rem 1rem;
   display: grid;
-  gap: 1rem;
+  gap: 1.25rem;
+  margin: 1rem 0 2rem;
 }
 
 .event-venue .event-venue-info,
@@ -11,32 +12,42 @@
   padding: 0;
 }
 
+.event-venue .event-venue-info h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.event-venue .event-venue-info p {
+  margin: 0 0 0.5rem;
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.event-venue .event-venue-info a {
+  display: inline-block;
+  border-radius: 999px;
+  border: 1.5px solid #00b388;
+  color: #00b388;
+  text-decoration: none;
+  padding: 0.35rem 0.85rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.event-venue .event-venue-info a:hover {
+  background: #f0faf8;
+}
+
 .event-venue .event-venue-media img {
   width: 100%;
   height: auto;
   border-radius: 0;
 }
 
-.event-venue .event-venue-info h2 {
-  margin: 0 0 0.5rem;
-}
-
-.event-venue .event-venue-info p {
-  margin: 0 0 0.6rem;
-}
-
-.event-venue .event-venue-info a {
-  display: inline-block;
-  border-radius: 999px;
-  border: 1px solid #00b388;
-  color: #111;
-  text-decoration: none;
-  padding: 0.35rem 0.9rem;
-  font-weight: 700;
-}
-
 @media (min-width: 768px) {
   .event-venue {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1.5rem;
   }
 }

@@ -1,7 +1,8 @@
 .event-details {
-  padding: 1rem;
+  padding: 1rem 1.25rem;
   background: #f0f1f2;
   border-radius: 0;
+  margin: 0;
 }
 
 .event-details ul {
@@ -9,20 +10,31 @@
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 0.85rem;
+  gap: 1rem;
 }
 
 .event-details li {
   padding: 0;
+  display: grid;
+  gap: 0.2rem;
 }
 
 .event-details strong {
   display: block;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.1rem;
+  font-weight: 700;
+  font-size: 0.94rem;
+  color: #111;
+}
+
+.event-details p {
+  margin: 0;
+  font-size: 0.93rem;
+  color: #555;
 }
 
 @media (min-width: 768px) {
   .event-details {
-    padding: 0.85rem 1rem;
+    padding: 0.9rem 1rem;
   }
 }

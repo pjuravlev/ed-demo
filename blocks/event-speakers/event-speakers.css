@@ -1,9 +1,12 @@
 .event-speakers {
   padding: 1rem;
+  margin: 1rem 0 2rem;
 }
 
 .event-speakers h2 {
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.7rem;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .event-speakers ul {
@@ -11,19 +14,24 @@
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 1rem;
+  gap: 0;
 }
 
 .event-speakers li {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
   align-items: start;
-  padding: 1.25rem 0;
-  border-bottom: 1px solid #e4e6e8;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e8eaec;
+}
+
+.event-speakers li:last-child {
+  border-bottom: 0;
 }
 
 .event-speakers img {
-  width: 136px;
+  width: 140px;
   max-width: 100%;
   border-radius: 0;
   height: auto;
@@ -34,17 +42,30 @@
   margin: 0;
 }
 
+.event-speakers h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
 .event-speakers .event-speakers-content {
   display: grid;
-  gap: 0.4rem;
+  gap: 0.35rem;
 }
 
 .event-speakers .event-speakers-content p {
-  line-height: 1.45;
+  line-height: 1.5;
+  font-size: 0.94rem;
+}
+
+.event-speakers .event-speakers-content strong {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.1rem;
 }
 
 @media (min-width: 768px) {
   .event-speakers li {
     grid-template-columns: 152px minmax(0, 1fr);
+    gap: 1.25rem;
   }
 }
